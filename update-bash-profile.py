@@ -1,0 +1,10 @@
+#!/usr/bin/python
+sysctlFile = open('/home/oracle/.bash_profile', 'a')
+sysctlFile.write('TMPDIR=$TMP; export TMPDIR\n')
+sysctlFile.write('ORACLE_BASE=/u01/app/oracle; export ORACLE_BASE\n')
+sysctlFile.write('ORACLE_HOME=/u01/app/oracle/product/12.1.0/db_1; export ORACLE_HOME\n')
+sysctlFile.write('ORACLE_SID=orcl; export ORACLE_SID\n')
+sysctlFile.write('PATH=$ORACLE_HOME/bin:$PATH; export PATH\n')
+sysctlFile.write('LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib:/usr/lib64; export LD_LIBRARY_PATH\n')
+sysctlFile.write('CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib; export CLASSPATH\n')
+sysctlFile.close()
